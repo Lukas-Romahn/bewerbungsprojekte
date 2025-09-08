@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Environment name="logger" value="true" type="java.lang.Boolean" override="false"/>
+    <Environment name="projectPath" value="D:\Lukas Romahn\Dokumente\Hochschule Mannheim\WAI\wai02" type="java.lang.String" override="false"/>
+    <Environment name="configPath" value="/src/main/resources" type="java.lang.String" override="false"/>
+    <Environment name="imageSavePath" value="D:\Lukas Romahn\Dokumente\Hochschule Mannheim\WAI\wai02\images" type="java.lang.String" override="false"/>
+    <Environment name="thumbnailSavePath" value="D:\Lukas Romahn\Dokumente\Hochschule Mannheim\WAI\wai02\thumbnails" type="java.lang.String" override="false"/>
+    <Environment name="logPath" value="D:\Lukas Romahn\Dokumente\Hochschule Mannheim\WAI\wai02\logs" type="java.lang.String" override="false"/>
+    
+	<Resource name="jdbc/waiDB" auth="Container" type="javax.sql.DataSource"
+		driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql://db.inftech.hs-mannheim.de/n2123208_waiDB"
+		username="n2123208" password="DB1234"
+	/>
+	
+
+</Context>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <File name="FileAppender" fileName="C:\Users\eymen\Uni\WAI\wai02\wai02\logs\logsapp-${date:yyyyMMdd}.log" immediateFlush="true" append="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+    	<logger name="controller.Login" level="debug"/>
+    	<logger name="utils.JNDIFactory" level="info"/>
+    	<logger name="utils.QuartzInitializerServlet" level="debug"/>
+    	<logger name="utils.SystemStartup" level="debug"/>
+    	<logger name="utils.ImageDownloadJob" level="debug"/>
+        <Root level="debug"><!--Debug für alle Nachrichten -->
+<!--         
+            <AppenderRef ref="ConsoleAppender" />
+ -->
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>

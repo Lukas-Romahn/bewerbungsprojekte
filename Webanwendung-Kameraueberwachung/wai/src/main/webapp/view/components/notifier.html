@@ -1,0 +1,80 @@
+    <style>
+      
+
+        .notification {
+            display: none;
+            position: fixed;
+            bottom: 20px;      /* Statt top */
+            right: 20px;       /* Rechts bleibt */
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+            font-family: Arial, sans-serif;
+            
+        }
+        .notification.success {
+   		 background-color: #4CAF50;
+		}	
+
+        .notification.show {
+            display: block;
+        }
+
+        .notification.error {
+            background-color: #f44336;
+        }
+
+        .notification.warning {
+            background-color: #ff9800;
+        }
+
+        .notification.info {
+            background-color: #2196F3;
+        }
+
+    </style>
+<body>
+    <div id="notification" class="notification">
+        <span id="notification-text"></span>
+    </div>
+
+    <script>
+        let notificationTimeout;
+
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notification-text');
+            
+            // Clear previous timeout
+            if (notificationTimeout) {
+                clearTimeout(notificationTimeout);
+            }
+            
+            // Set message and type
+            notificationText.textContent = message;
+            notification.style.display = 'Block'
+            notification.className = `notification show ${type}`;
+            
+            // Auto-hide after 3 seconds
+            notificationTimeout = setTimeout(() => {
+                hideNotification();
+            }, 3000);
+        }
+
+        function hideNotification() {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'none';
+            notification.classList.remove('show');
+            
+            if (notificationTimeout) {
+                clearTimeout(notificationTimeout);
+            }
+        }
+    </script>
+</body>
+</html>

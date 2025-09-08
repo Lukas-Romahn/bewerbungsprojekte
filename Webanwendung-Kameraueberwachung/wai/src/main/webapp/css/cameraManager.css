@@ -1,0 +1,161 @@
+
+body {
+    	
+    	        background-color: #f1f1f1;
+    	
+    	}
+
+.table-wrapper {
+	font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.table-wrapper h2 {
+  margin-bottom: 0.5rem;
+}
+
+.table-wrapper  .horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.table-wrapper button,
+.table-wrapper form button {
+  background-color: #1976d2;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  height: 38px; /* feste Höhe für Gleichheit */
+}
+
+.table-wrapper button:hover,
+input[type="submit"]:hover {
+  background-color: #125ea2;
+}
+
+.table-wrapper button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.table-wrapper #deleteSelectedBtn {
+  background-color: #d32f2f;
+}
+.table-wrapper td.action-buttons {
+  gap: 0.5rem;
+   display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+}
+
+
+.table-wrapper #deleteSelectedBtn:hover {
+  background-color: #b71c1c;
+}
+
+/* Tabelle */
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.table-wrapper th,
+td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-wrapper th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+/* Checkbox-Spalte */
+.table-wrapper .selection-column {
+  text-align: center;
+  width: 80px;
+  display:none;
+}
+
+/* Paginierung */
+.table-wrapper .paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table-wrapper #pageInfo {
+  font-weight: 500;
+}
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-group label {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.filter-group select,
+.filter-group input {
+  min-width: 120px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+/* Aktion-Buttons */
+.table-wrapper .btn-edit,
+.btn-delete {
+  margin-right: 0.5rem;
+  background-color: #607d8b;
+}
+
+.table-wrapper .btn-edit:hover {
+  background-color: #455a64;
+}
+
+.table-wrapper .btn-delete {
+  background-color: #e53935;
+}
+
+.table-wrapper .btn-delete:hover {
+  background-color: #c62828;
+}
+
+/* Auswahlmodus aktiv */
+body.selection-active .table-wrapper .selection-column {
+  background-color: #e3f2fd;
+  display:table-cell;
+}

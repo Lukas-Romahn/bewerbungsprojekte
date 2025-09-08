@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+/* styles/location.css */
+.page-a-wrapper {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 40px;
+    color: #333;
+}
+
+.page-a-wrapper h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.page-a-wrapper #standortContainer {
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.page-a-wrapper .Standort-block {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+/* Text links */
+.page-a-wrapper .Standort-block span {
+    font-size: 1.1em;
+    flex: 1; /* nimmt den gesamten freien Platz */
+}
+
+/* Button-Container rechts */
+.page-a-wrapper .Standort-block .button-group {
+    display: flex;
+    gap: 10px; /* Abstand zwischen Buttons */
+}
+
+/* Button selbst, keine Änderung nötig, optional: */
+.page-a-wrapper .Standort-block button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.page-a-wrapper .Standort-block button:hover {
+    background-color: #2980b9;
+}
+.page-a-wrapper #standortContainer .deletebtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.page-a-wrapper #standortContainer .deletebtn:hover {
+    background-color: #b52a37;
+}
+.page-a-wrapper form {
+    margin: 0;
+}
+
+.page-a-wrapper #editFormContainer {
+    max-width: 600px;
+    background-color: #fff;
+    border-top: 3px solid #3498db;
+    padding: 20px 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    margin-bottom:12px;
+}
+
+.page-a-wrapper #editFormContainer h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+.page-a-wrapper #editFormContainer label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.page-a-wrapper #editFormContainer input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.page-a-wrapper #editFormContainer input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.page-a-wrapper #editFormContainer button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.page-a-wrapper #editFormContainer button:hover {
+    background-color: #2980b9;
+}
+
+.page-a-wrapper #editFormContainer button[type="button"] {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+}
+
+#editFormContainer button[type="button"]:hover {
+    background-color: #95a5a6;
+}
+
+.page-a-wrapper p[style*="color:red"] {
+    font-weight: bold;
+    margin-top: 10px;
+}
+    .notification {
+    position: fixed;
+    bottom: 20px;      /* Statt top */
+    right: 20px;       /* Rechts bleibt */
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    font-family: Arial, sans-serif;
+    
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+.notification.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+        
