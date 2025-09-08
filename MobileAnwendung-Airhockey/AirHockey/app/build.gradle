@@ -1,0 +1,80 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id 'androidx.navigation.safeargs'
+}
+
+
+android {
+    namespace 'de.pbma.moa.airhockey'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "de.pbma.moa.airhockey"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures{
+        viewBinding=true;
+    }
+    buildscript {
+        repositories {
+            google()
+        }
+        dependencies {
+            def nav_version = "2.8.5"
+            classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        }
+    }
+}
+
+dependencies {
+
+    // app/build.gradle.kts (dependencies section):
+    implementation libs.play.services.code.scanner
+    implementation libs.play.services.tflite.java
+    implementation libs.zxing.android.embedded
+    implementation libs.play.services.vision
+    implementation 'com.google.zxing:core:3.4.1'  // Core Bibliothek
+    implementation libs.play.services.base
+    implementation 'com.google.android.gms:play-services-code-scanner:16.1.0'
+    implementation 'com.google.mlkit:barcode-scanning:17.0.3'
+
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+
+    implementation libs.appcompat
+    implementation libs.mqtt
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.legacy.support.v4
+    implementation libs.lifecycle.viewmodel.android
+    implementation libs.fragment
+    implementation project(':app:database')
+    implementation libs.room.runtime
+    implementation project(':app:tournament')
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation libs.json.parser
+    implementation 'com.github.duanhong169:colorpicker:1.1.6'
+
+
+}

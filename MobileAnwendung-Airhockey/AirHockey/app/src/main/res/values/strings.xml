@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AirHockey</string>
+    <string name="welcome">Willkommen zu AirHockey</string>
+    <string name="lobby_beitreten">Lobby Beitreten</string>
+    <string name="lobby_erstellen">Lobby erstellen</string>
+    <string name="Lobby_create_explain">Erstellen sie eine Lobby\n in der Leute im selben netzwerk\n beitreten können, mithilfe eines Lobbycodes.</string>
+    <string name="Lobby_join_explain">Treten sie einer Lobby mithilfe\neines Lobby codes ein</string>
+    <string name="MqTTLobbyJoin">24moagc/lobbyID/%s/Join</string>
+    <string name="MqTTLobbyJoinAck">24moagc/lobbyID/%s/DeviceID/%s/ACK</string>
+    <string name="MqTTLobbyStart">24moagc/lobbyID/%s/LobbyStarted</string>
+    <string name="MqTTLobbyUserData">24moagc/lobbyID/%s/DeviceID/%s/Data</string>
+    <string name="MqTTLobbyLeavePlayer">24moagc/lobbyID/%s/DeviceID/%s/Leave</string>
+    <string name="MqTTLobbyLeaveTable">24moagc/lobbyID/%s/Leave</string>
+    <string name="MqTTLobbyLeavePlayerFromLobby">24moagc/lobbyID/%s/DeviceID/%s/Leave/Lobby</string>
+    <string name="MqTTLobbyStartedACK">24moagc/lobbyID/%s/DeviceID/%s/LobbyStarted</string>
+    <string name="MqTTTurnierJoin">24moagc/turnierID/%s/Join</string>
+    <string name="MqTTTurnierJoinAck">24moagc/turnierID/%s/DeviceID/%s/ACK</string>
+    <string name="MqTTTurnierJoinPlayer1Ack">24moagc/turnierID/%s/Join/Player1</string>
+    <string name="MqTTTurnierJoinPlayer2Ack">24moagc/turnierID/%s/Join/Player2</string>
+    <string name="MqTTTurnierMessagePlayers">24moagc/turnierID/%s/Join/PeopleToJoin</string>
+    <string name="MqTTTurnierRejoin">24moagc/turnierID/%s/DeviceID/%s/Rejoin</string>
+    <string name="MqTTTurnierRejoinACK">24moagc/turnierID/%s/DeviceID/%s/Rejoin/ACK</string>
+    <string name="MqTTTurnierLobbyStarted">24moagc/turnierID/%s/DeviceID/%s/LobbyStarted</string>
+    <string name="MqTTTurnierLobbyStartedAck">24moagc/turnierID/%s/DeviceID/%s/LobbyStarted/ACK</string>
+    <string name="MqTTGameFinished">24moagc/lobbyID/%s/DeviceID/%s/GameFinish</string>
+    <string name="MqTTGameInfo">24moagc/lobbyID/%s/DeviceID/%s/GameInfo</string>
+    <string name="datenbankAcess">Hier können sie sich die Highscore Liste anzeigen lassen</string>
+    <string name="btn_datenbank_access">Highscore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

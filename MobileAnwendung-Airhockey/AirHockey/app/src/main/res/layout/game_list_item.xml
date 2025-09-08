@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:elevation="2dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp">
+
+    <!-- Spiel ID -->
+    <TextView
+        android:id="@+id/tvGameIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spiel ID: 12345"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="15dp" />
+
+    <!-- Status des Spiels -->
+    <TextView
+        android:id="@+id/tvGameState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Noch nicht stattgefunden"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <GridLayout
+        android:id="@+id/gLLastGameInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:rowCount="2">
+
+        <!-- Spieler 1 -->
+        <TextView
+            android:id="@+id/tvPlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max Mustermann"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=":" />
+
+        <!-- Spieler 2 -->
+        <TextView
+            android:id="@+id/tvPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+
+        <TextView
+            android:id="@+id/tvPlayer1Goals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="3" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/tvPlayer2Goals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0" />
+
+    </GridLayout>
+
+
+
+  <!--  &lt;!&ndash; Tore von Spieler 1 &ndash;&gt;
+    <TextView
+        android:id="@+id/tvPlayer1Goals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+
+
+    &lt;!&ndash; Tore von Spieler 2 &ndash;&gt;
+    <TextView
+        android:id="@+id/tvPlayer2Goals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tore: 2"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />-->
+
+    <!-- Divider (Stilvoller Trenner) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

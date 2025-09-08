@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.LobbyJoinFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etLobbyCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Lobbycode"
+                android:inputType="text"
+                android:layout_gravity="center" />
+
+            <de.pbma.moa.airhockey.CustomButton
+                android:id="@+id/btnQRCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_pixel"
+                android:text="scan QR"
+                />
+
+        </LinearLayout>
+
+
+        <de.pbma.moa.airhockey.CustomButton
+            android:id="@+id/btnConfirmLobbyCode"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Bestätigen"
+            android:layout_gravity="center"
+            android:background="@drawable/button_pixel_confirm" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

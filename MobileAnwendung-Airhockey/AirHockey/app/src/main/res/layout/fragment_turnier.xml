@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Turnier.TurnierFragment">
+
+    <de.pbma.moa.airhockey.CustomButton
+        android:id="@+id/btnJoinTurnier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/button_pixel_turnier"
+        android:text="Turnier beitreten"
+        app:layout_constraintBottom_toTopOf="@+id/btnShowTurnier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.pbma.moa.airhockey.CustomButton
+        android:id="@+id/btnShowTurnier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/button_pixel_turnier"
+        android:text="Turniere ansehen"
+        app:layout_constraintBottom_toTopOf="@+id/btnTurnierErstellen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnJoinTurnier" />
+
+    <de.pbma.moa.airhockey.CustomButton
+        android:id="@+id/btnTurnierErstellen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/button_pixel_turnier"
+        android:text="Turnier erstellen"
+        app:layout_constraintBottom_toTopOf="@+id/btnTurnierWeiter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowTurnier" />
+
+    <de.pbma.moa.airhockey.CustomButton
+        android:id="@+id/btnTurnierWeiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="69dp"
+        android:background="@drawable/button_pixel_turnier"
+        android:text="Turnier\nWeiterspielen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTurnierErstellen" />
+</androidx.constraintlayout.widget.ConstraintLayout>

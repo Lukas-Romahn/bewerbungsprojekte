@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <rotate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:duration="10000"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="infinite">
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#00FFFF" />
+            <size android:width="4dp" android:height="2dp" />
+        </shape>
+    </rotate>
+
+</selector>

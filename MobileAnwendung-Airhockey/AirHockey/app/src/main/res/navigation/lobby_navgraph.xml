@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lobby_navgraph"
+    app:startDestination="@id/lobbyFragment">
+
+
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="de.pbma.moa.airhockey.ui.main.LobbyFragment"
+        android:label="Hauptmenü"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_lobbyFragment_to_lobbyCreateFragment"
+            app:destination="@id/lobbyCreateFragment" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_lobbyJoinFragment"
+            app:destination="@id/lobbyJoinFragment" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_afterGameTableFragment"
+            app:destination="@id/afterGameTableFragment" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_turnierFragment"
+            app:destination="@id/turnierFragment" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_lobbyTurnierFragment"
+            app:destination="@id/lobbyTurnierFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/lobbyCreateFragment"
+        android:name="de.pbma.moa.airhockey.ui.main.LobbyCreateFragment"
+        android:label="Lobby erstellen"
+        tools:layout="@layout/fragment_lobby_create"
+        >
+        <action
+            android:id="@+id/action_lobbyCreateFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+ <fragment
+        android:id="@+id/lobbyJoinFragment"
+        android:name="de.pbma.moa.airhockey.ui.main.LobbyJoinFragment"
+        android:label="Lobby beitreten"
+        tools:layout="@layout/fragment_lobby_join"
+        >
+     <action
+         android:id="@+id/action_lobbyJoinFragment_to_lobbyFragment"
+         app:destination="@id/lobbyFragment" />
+ </fragment>
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="de.pbma.moa.airhockey.ui.main.OptionsFragment"
+        android:label="Einstellungen"
+        tools:layout="@layout/fragment_options" >
+        <action
+            android:id="@+id/action_optionsFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/afterGameTableFragment"
+        android:name="de.pbma.moa.airhockey.ui.AfterGameFragment"
+        android:label="Ergebnis"
+        tools:layout="@layout/fragment_after_game" >
+        <action
+            android:id="@+id/action_afterGameTableFragment2_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/turnierFragment"
+        android:name="de.pbma.moa.airhockey.ui.Turnier.TurnierFragment"
+        android:label="Turnier"
+        tools:layout="@layout/fragment_turnier" >
+        <action
+            android:id="@+id/action_turnierFragment_to_createTurnierFragment"
+            app:destination="@id/createTurnierFragment" />
+        <action
+            android:id="@+id/action_turnierFragment_to_joinTurnierFragment"
+            app:destination="@id/joinTurnierFragment" />
+        <action
+            android:id="@+id/action_turnierFragment_to_showTurnierFragment"
+            app:destination="@id/showTurnierFragment" />
+        <action
+            android:id="@+id/action_turnierFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+        <action
+            android:id="@+id/action_turnierFragment_to_loadTurnierTableFragment"
+            app:destination="@id/loadTurnierTableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTurnierFragment"
+        android:name="de.pbma.moa.airhockey.ui.Turnier.CreateTurnierFragment"
+        android:label="Turnier erstellen"
+        tools:layout="@layout/fragment_create_turnier" />
+    <fragment
+        android:id="@+id/joinTurnierFragment"
+        android:name="de.pbma.moa.airhockey.ui.Turnier.JoinTurnierFragment"
+        android:label="Turnier beitreten"
+        tools:layout="@layout/fragment_join_turnier" >
+
+        <action
+            android:id="@+id/action_joinTurnierFragment_to_lobbyTurnierFragment"
+            app:destination="@id/lobbyTurnierFragment"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/showTurnierFragment"
+        android:name="de.pbma.moa.airhockey.ui.Turnier.ShowTurnierFragment"
+        android:label="Turnier liste" >
+        <action
+            android:id="@+id/action_showTurnierFragment_to_detailTurnierFragment"
+            app:destination="@id/detailTurnierFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTurnierFragment"
+        android:name="de.pbma.moa.airhockey.ui.Turnier.DetailTurnierFragment"
+        android:label="Turnier Spiele" >
+        <argument
+            android:name="Name"
+            app:argType="string"/>
+        <argument
+            android:name="Tid"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_detailTurnierFragment_to_showTurnierFragment"
+            app:destination="@id/showTurnierFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lobbyTurnierFragment"
+        android:name="de.pbma.moa.airhockey.ui.Turnier.LobbyTurnierFragment"
+        android:label="Turnier Lobby"
+        tools:layout="@layout/fragment_lobby_turnier" >
+        <argument
+            android:name="tournamentCode"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_lobbyTurnierFragment_to_joinTurnierFragment"
+            app:destination="@id/joinTurnierFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/afterGameFragment"
+        android:name="de.pbma.moa.airhockey.ui.AfterGameFragment"
+        android:label="Spiel Ergebnis"
+        tools:layout="@layout/fragment_after_game" >
+        <action
+            android:id="@+id/action_afterGameFragment_to_weiterSpielenFragment"
+            app:destination="@id/weiterSpielenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weiterSpielenFragment"
+        android:name="de.pbma.moa.airhockey.ui.Turnier.WeiterSpielenFragment"
+        android:label="Nächstes Spiel"
+        tools:layout="@layout/fragment_weiter_spielen" >
+        <action
+            android:id="@+id/action_weiterSpielenFragment_to_turnierFragment"
+            app:destination="@id/turnierFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadTurnierTableFragment"
+        android:name="de.pbma.moa.airhockey.ui.Turnier.LoadTurnierTableFragment"
+        android:label="Turnier Weiterspielen" >
+        <action
+            android:id="@+id/action_loadTurnierTableFragment_to_weiterSpielenFragment"
+            app:destination="@id/weiterSpielenFragment" />
+    </fragment>
+
+</navigation>

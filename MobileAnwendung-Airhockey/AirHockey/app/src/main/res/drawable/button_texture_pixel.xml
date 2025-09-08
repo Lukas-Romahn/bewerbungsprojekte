@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Hintergrundfarbe -->
+    <solid android:color="#00F6ED"/>
+
+    <!-- Pixel-Rand -->
+    <stroke android:color="#FFFFFF" android:width="2dp"/> <!-- Weißer Rand für den Pixel-Look -->
+
+    <!-- Optional: Abgerundete Ecken im Pixel-Look -->
+    <corners android:radius="4dp" />
+
+    <!-- Optional: Verleihe dem Button eine Schattierung im Pixel-Stil -->
+    <gradient
+        android:startColor="#00F6ED"
+        android:endColor="#00B3C6"
+        android:angle="270"/>
+</shape>
